@@ -107,4 +107,4 @@ def main():
             case '6': break 
             case _: print('Opción inválida.')
 if __name__ == "__main__":
-    main()  
+    main()
