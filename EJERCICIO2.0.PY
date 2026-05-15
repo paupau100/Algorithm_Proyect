@@ -1,4 +1,3 @@
-# FUNCIONES DEL RETO 02: ESTADÍSTICAS DE NOTAS
 # Calcula el promedio sumando las notas y dividiendo por la cantidad total [cite: 54, 55]
 def calcular_promedio(notas):
     if not notas:
@@ -31,8 +30,6 @@ def mostrar_reporte(nombres, notas):
         estado = "Aprobado" if notas[i] >= 3.0 else "Reprobado"
         print(f"{nombres[i]:<15} | {notas[i]:<6.1f} | {estado}")
 
-# FUNCIONES DE ENTRADA Y PRUEBA
-
 # Se encarga de pedir al usuario los nombres y las notas por teclado
 def solicitar_datos():
     nombres = []
@@ -64,7 +61,6 @@ def probar_reto2():
     print(f"• Nota más alta: {buscar_nota_mayor(calificaciones)}")
     print(f"• Nota más baja: {buscar_nota_menor(calificaciones)}")
     print(f"• Total aprobados: {contar_notas_aprobadas(calificaciones, 3.0)}")
-# ESTRUCTURA PRINCIPAL
 
 # Punto de entrada que solo llama a la función de prueba [cite: 21]
 def main():

@@ -1,30 +1,24 @@
-# --- FUNCIONES DEL RETO 04: ORDENADOR Y BUSCADOR ---
-
-# 1. Crea: intercambiar(arr, i, j) [cite: 109]
+# 1. Intercambia valores entre dos posiciones de la lista [cite: 109]
 def intercambiar(arr, i, j):
-    # Intercambia los valores en las posiciones i y j de la lista
     arr[i], arr[j] = arr[j], arr[i]
 
-# 2. Crea: bubble_sort(arr) - Debe llamar a intercambiar() [cite: 111, 112]
+# 2. Algoritmo de ordenamiento que utiliza la función intercambiar [cite: 111, 112]
 def bubble_sort(arr):
     n = len(arr)
     for i in range(n):
         for j in range(0, n - i - 1):
             if arr[j] > arr[j + 1]:
-                # Llamada obligatoria a la función de intercambio 
                 intercambiar(arr, j, j + 1)
 
-# 3. Crea: busqueda_lineal(arr, objetivo) [cite: 114]
+# 3. Busca un elemento de inicio a fin en la lista [cite: 114]
 def busqueda_lineal(arr, objetivo):
-    # Recorre la lista de inicio a fin buscando el objetivo
     for i in range(len(arr)):
         if arr[i] == objetivo:
             return i
     return -1
 
-# 4. Crea: busqueda_binaria(arr, objetivo) [cite: 116]
+# 4. Busca un elemento dividiendo la lista (requiere lista ordenada) [cite: 116, 127]
 def busqueda_binaria(arr, objetivo):
-    # La búsqueda binaria usa inicio, fin y medio 
     inicio = 0
     fin = len(arr) - 1
     
@@ -38,40 +32,48 @@ def busqueda_binaria(arr, objetivo):
             fin = medio - 1
     return -1
 
-# 5. Crea: mostrar_array(arr, etiqueta) [cite: 118]
+# 5. Muestra la lista con un formato visual claro [cite: 118]
 def mostrar_array(arr, etiqueta):
-    # Imprime la etiqueta y la lista con formato [cite: 120]
     print(f"{etiqueta}: {arr}")
 
-# 6. Función de Prueba [cite: 121]
+# Permite que el usuario cree su propia lista desordenada 
+def solicitar_datos_busqueda():
+    numeros = []
+    print("Configuración de lista (5 números):")
+    for i in range(5):
+        num = int(input(f"Ingrese el número {i+1}: "))
+        numeros.append(num)
+    return numeros
+
+# --- COORDINACIÓN DEL RETO ---
+
+# Ejecuta el flujo: pedir datos, mostrar, ordenar y buscar [cite: 121]
 def probar_reto4():
-    print("\n" + "="*10 + " RETO 04: ORDENADOR Y BUSCADOR " + "="*10)
+    print("\n" + "="*10 + " CONFIGURACIÓN RETO 04 " + "="*10)
     
-    # Crear lista desordenada [cite: 122]
-    numeros = [64, 34, 25, 12, 22, 11, 90]
+    # 1. El usuario crea la lista desordenada
+    lista_usuario = solicitar_datos_busqueda()
     
-    # Mostrarla [cite: 123]
-    mostrar_array(numeros, "Lista Inicial (Desordenada)")
+    # 2. Mostrar lista inicial
+    mostrar_array(lista_usuario, "\nLista ingresada")
     
-    # Ordenarla [cite: 124]
-    bubble_sort(numeros)
-    mostrar_array(numeros, "Lista Final (Ordenada)")
+    # 3. Ordenar la lista
+    bubble_sort(lista_usuario)
+    mostrar_array(lista_usuario, "Lista ordenada (Bubble Sort)")
     
-    # Buscar elementos [cite: 125]
-    objetivo = 22
-    # Se utiliza búsqueda binaria porque la lista ya está ordenada
-    posicion = busqueda_binaria(numeros, objetivo)
+    # 4. Buscar un elemento
+    valor_buscado = int(input("\n¿Qué número desea buscar en la lista?: "))
+    posicion = busqueda_binaria(lista_usuario, valor_buscado)
     
+    # Mostrar resultado de la búsqueda
     if posicion != -1:
-        print(f"\nResultado: El número {objetivo} está en el índice {posicion}.")
+        print(f"¡Encontrado! El número {valor_buscado} está en el índice {posicion}.")
     else:
-        print(f"\nResultado: El número {objetivo} no se encuentra en la lista.")
+        print(f"El número {valor_buscado} no existe en la lista.")
 
-# --- ESTRUCTURA PRINCIPAL ---
-
+# Punto de entrada obligatorio del programa [cite: 21, 23]
 def main():
-    # La función main() sólo debe llamar funciones [cite: 21, 23]
-    probar_reto4()
+     probar_reto4()
 
 if __name__ == "__main__":
     main()
