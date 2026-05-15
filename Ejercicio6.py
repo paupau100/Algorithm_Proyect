@@ -3,7 +3,8 @@
 def potencia(base, exp):
     if exp == 0: #decimos que si exp es igual a cero nos devuelva 1 porque x**0=1
         return 1
-    return base * potencia(base, exp - 1) #Llamamos a la función potencia para que se multiplique por la base pero que se le reste 1 al exponente
+    return base * potencia(base, exp - 1) #Llamamos a la función potencia para que se multiplique 
+#por la base pero que se le reste 1 al exponente
 
 #Ahora vamos con el máximo común denominador 
 def mcd(a, b): #Definimos la función que alberga ambos números
@@ -12,7 +13,8 @@ def mcd(a, b): #Definimos la función que alberga ambos números
     return mcd(b, a % b)
 
 
-
+#Definimos la funcion es_primo 
+# #para probar si un número es primo(el usuario no debe usar números muy grandes pues el sistema fallará )
 def es_primo(n, div=2):
     if n < 2:
         return False
@@ -23,12 +25,13 @@ def es_primo(n, div=2):
     return es_primo(n, div + 1)
 
 
+
 def fibonacci(k):
     if k == 0: return 0
     if k == 1: return 1
     return fibonacci(k - 1) + fibonacci(k - 2)
 
-
+#Construimos una lista y usamos el acumulador (serie=none) para mantener el estado de la lista
 def generar_serie_fibonacci(m, actual=0, serie=None):
     if serie is None: serie = []
     if actual == m: return serie
@@ -37,7 +40,8 @@ def generar_serie_fibonacci(m, actual=0, serie=None):
 
 
 
-historial = []
+historial = []#Actúa como variable global pues almacena resultados 
+#mientras que todo el programa está en ejecución
 
 
 def agregar_al_historial(nombre_op, resultado):
@@ -55,7 +59,7 @@ def mostrar_historial():
         for elemento in historial:
             print(f"• {elemento}")
 
-
+#Ahora vamos con las funciones de ejecución
 def ejecucion_potencia():
     d=int(input('Base: '))
     e=int(input('Exponente: '))
@@ -106,5 +110,6 @@ def main():
             case '5': mostrar_historial()
             case '6': break 
             case _: print('Opción inválida.')
+#Acá aseguramos que el menú solo se ejecute si el archivo se abre directamente
 if __name__ == "__main__":
     main()
