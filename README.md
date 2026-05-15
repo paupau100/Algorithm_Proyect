@@ -1,5 +1,8 @@
 # Algorithm_Proyect
-Este repositorio contiene una colección de 6 ejercicios desarrolados en Python,están enfocados en la implementación de funciones modulares,recursividad y manejo de cadenas(f-strings)
+
+
+Este repositorio contiene la resolución del Taller Práctico de Programación Modular. El objetivo principal es aplicar los principios de responsabilidad única, manejo de listas, métodos de cadenas y recursividad.
+
 
 ---CONTENIDO---
 
@@ -20,3 +23,11 @@ Este repositorio contiene una colección de 6 ejercicios desarrolados en Python,
 
 6.Calculadora Recursiva 
 
+
+Modularidad: Cada función cumple un único propósito.
+
+Estilo: Uso estricto de snake_case para nombres de funciones y variables.
+
+Estructura: La lógica reside en funciones independientes y main() actúa únicamente como orquestador.
+
+Documentación: Comentarios breves en funciones complejas.
