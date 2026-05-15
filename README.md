@@ -1,24 +1,22 @@
 # Algorithm_Proyect
-Proyecto Algoritmos
-En este proyecto abarcaremos 6 ejercicios de funciones modulares 
+Este repositorio contiene una colección de 6 ejercicios desarrolados en Python,están enfocados en la implementación de funciones modulares,recursividad y manejo de cadenas(f-strings)
+
+---CONTENIDO---
 
 
-El primer ejercicio es sobre una Máquina de Saludos
+1.Máquina de Saludo:Gestiones de interacción mediante cadenas
+
+2.Estadísticas de Notas
 
 
-El segundo es una Estadística de Notas
+3.Validador de Contraseñas 
 
 
-El tercero es un Validador de Contraseñas 
+4.Ordenador y Buscador 
 
 
-El cuarto un Ordenador y Buscador 
+5.Sistema de Inventario Modular 
 
 
-El quinto es un Sistema de Inventario Modular 
+6.Calculadora Recursiva 
 
-
-El sexto es una Calculadora Recursiva 
-
-
-Utilizamos funciones modulares,funciones recursivas,f-string,cadenas.
