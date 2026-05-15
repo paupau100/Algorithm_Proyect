@@ -3,7 +3,8 @@
 def potencia(base, exp):
     if exp == 0: #decimos que si exp es igual a cero nos devuelva 1 porque x**0=1
         return 1
-    return base * potencia(base, exp - 1) #Llamamos a la función potencia para que se multiplique por la base pero que se le reste 1 al exponente
+    return base * potencia(base, exp - 1) #Llamamos a la función potencia para que se multiplique 
+#por la base pero que se le reste 1 al exponente
 
 #Ahora vamos con el máximo común denominador 
 def mcd(a, b): #Definimos la función que alberga ambos números
