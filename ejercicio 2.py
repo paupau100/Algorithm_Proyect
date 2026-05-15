@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 def calcular_promedio(notas):
     # Calcula la suma de las notas y divide por el total de elementos
     if not notas:
@@ -60,7 +59,6 @@ def main():
 if __name__ == "__main__":
     # Punto de inicio del programa
     main()
-=======
 def calcular_promedio(notas):
     # Calcula la suma de las notas y divide por el total de elementos
     if not notas:
@@ -122,4 +120,3 @@ def main():
 if __name__ == "__main__":
     # Punto de inicio del programa
     main()
->>>>>>> aa42046a231da9c139fa0d9238e126154c977e44
